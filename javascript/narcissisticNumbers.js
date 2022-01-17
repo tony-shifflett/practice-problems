@@ -2,5 +2,8 @@
 
 const narcissistic = (value)=>{
     let isNarcissistic = false; 
+    let newValue = value.toString().split("")
     console.log(isNarcissistic)
 }
+
+narcissistic(10)
