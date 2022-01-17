@@ -30,3 +30,22 @@ const narcissistic = (value)=>{
 
     return isNarcissistic
 }
+
+
+const narcissisticRefactor = (value)=>{
+    //default boolean value to false
+    let isNarcissistic = false; 
+    //convert parameter to string, then split into individual digits
+    let newValue = value.toString().split("")
+    //initiate the sum value to 0
+    let sum = 0;
+    //use map function and exponentiation operator to simplify code
+    newValue.map((digit)=>{
+        sum += digit**newValue.length
+    })
+    if (sum == value){
+        isNarcissistic = true;
+    }
+    return isNarcissistic
+}
+
